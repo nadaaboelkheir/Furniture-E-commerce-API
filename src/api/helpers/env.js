@@ -1,0 +1,23 @@
+/* eslint-disable no-undef */
+require('dotenv').config();
+
+module.exports = {
+	NODE_ENV: process.env.NODE_ENV,
+	PORT: process.env.PORT,
+	DB_URL: process.env.DB_URL,
+
+	JWT_LOGIN_SECRET_KEY: process.env.JWT_LOGIN_SECRET_KEY,
+	JWT_SIGNUP_SECRET_KEY: process.env.JWT_SIGNUP_SECRET_KEY,
+	JWT_FORGOTPASSWORD_SECRET_KEY: process.env.JWT_FORGOTPASSWORD_SECRET_KEY,
+	JWT_RESETPASSWORD_SECRET_KEY: process.env.JWT_RESETPASSWORD_SECRET_KEY,
+
+	TWILIO_SID: process.env.TWILIO_SID,
+	TWILIO_AUTH_TOKEN: process.env.TWILIO_AUTH_TOKEN,
+	TWILIO_SERVICE: process.env.TWILIO_SERVICE,
+
+	AWS_ACCESS_KEY_ID: process.env.AWS_ACCESS_KEY_ID,
+	AWS_ACCESS_SECRET_KEY: process.env.AWS_ACCESS_SECRET_KEY,
+	AWS_BUCKET_NAME: process.env.AWS_BUCKET_NAME,
+	AWS_ENDPOINT: process.env.AWS_ENDPOINT,
+	AWS_REGION: process.env.AWS_REGION,
+};

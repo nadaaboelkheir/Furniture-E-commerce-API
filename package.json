@@ -1,0 +1,67 @@
+{
+  "name": "nano-backend",
+  "version": "1.0.0",
+  "description": "e-commerce website and application for furniture",
+  "main": "src/index.js",
+  "scripts": {
+    "start:prod": "export NODE_ENV=production && node .",
+    "start:preProd" : "export NODE_ENV=PreProduction && node .",
+    "dev:prod":"set NODE_ENV= production && nodemon .",
+    "dev:preProd" : "set NODE_ENV=PreProduction && nodemon .",
+    "dev": "nodemon .",
+    "lint": "eslint  --ext .js src --fix",
+    "prettier": "prettier --write src",
+    "format": "npm run prettier && npm run lint",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/depaxTech/nano-backend.git"
+  },
+  "keywords": [
+    "e-commere",
+    "nano",
+    "ecommerce"
+  ],
+  "author": "samaa hamdi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/depaxTech/nano-backend/issues"
+  },
+  "homepage": "https://github.com/depaxTech/nano-backend#readme",
+  "dependencies": {
+    "aws-sdk": "^2.1416.0",
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "express-validator": "^7.0.1",
+    "firebase-admin": "^12.0.0",
+    "jsonwebtoken": "^9.0.1",
+    "mongoose": "^7.3.4",
+    "multer": "^1.4.5-lts.1",
+    "slugify": "^1.6.6",
+    "twilio": "^4.14.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.45.0",
+    "eslint-config-prettier": "^9.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.1",
+    "prettier": "3.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "prettier --write",
+      "eslint"
+    ]
+  }
+}
